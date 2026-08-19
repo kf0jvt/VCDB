@@ -135,7 +135,7 @@
     "modified": "2026-08-05T16:13:19Z",
     "sub_source": "vcdb"
   },
-  "reference": "https://www.classaction.org/data-breach-lawsuits/devereux-foundation-july-2026; https://www.claimdepot.com/data-breach/the-devereux-foundation-2026; https://www.hookphish.com/blog/ransomware-group-thegentlemen-hits-devereux-advanced-behavioral-health/; https://www.dexpose.io/the-gentlemen-target-devereux-advanced-behavioral-health-in-ransomware-attack/; https://www.globenewswire.com/news-release/2025/12/01/3197546/0/en/DATA-BREACH-ALERT-Edelson-Lechtzin-LLP-is-Investigating-Claims-on-Behalf-of-Devereux-Advanced-Behavioral-Health-Customers-Whose-Data-May-Have-Been-Compromised.html",
+  "reference": "https://www.classaction.org/data-breach-lawsuits/devereux-foundation-july-2026; https://www.claimdepot.com/data-breach/the-devereux-foundation-2026; https://www.hookphish.com/blog/ransomware-group-thegentlemen-hits-devereux-advanced-behavioral-health/; https://www.dexpose.io/the-gentlemen-target-devereux-advanced-behavioral-health-in-ransomware-attack/; https://www.globenewswire.com/news-release/2025/12/01/3197546/0/en/DATA-BREACH-ALERT-Edelson-Lechtzin-LLP-is-Investigating-Claims-on-Behalf-of-Devereux-Advanced-Behavioral-Health-Customers-Whose-Data-May-Have-Been-Compromised.html; https://www.federmanlaw.com/blog/the-devereux-foundation-data-breach-investigated-by-federman-sherwood/; https://oag.ca.gov/ecrime/databreach/reports/sb24-626965",
   "schema_name": "vcdb",
   "schema_version": "1.4.0",
   "security_incident": "Confirmed",

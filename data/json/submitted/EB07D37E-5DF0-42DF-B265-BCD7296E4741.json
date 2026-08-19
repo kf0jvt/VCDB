@@ -93,7 +93,7 @@
     "modified": "2026-08-05T16:12:24Z",
     "sub_source": "vcdb"
   },
-  "reference": "https://www.hipaajournal.com/craneware-cyberattack-data-breach/; https://www.cybersecuritydive.com/news/craneware-health-care-data-breach/825643/; https://techcrunch.com/2026/07/20/hackers-stole-significant-amount-of-data-from-tech-firm-relied-on-by-thousands-of-us-hospitals-and-pharmacies/",
+  "reference": "https://www.hipaajournal.com/craneware-cyberattack-data-breach/; https://www.cybersecuritydive.com/news/craneware-health-care-data-breach/825643/; https://techcrunch.com/2026/07/20/hackers-stole-significant-amount-of-data-from-tech-firm-relied-on-by-thousands-of-us-hospitals-and-pharmacies/; https://cybernews.com/security/craneware-confirms-data-breach/; https://www.privacyguides.org/news/2026/07/24/data-breach-roundup-july-17-23-2026/; https://www.scworld.com/brief/cybersecurity-threats-escalate-with-ransomware-data-breaches-and-online-fraud; https://thecyberexpress.com/weekly-roundup-ransomware-data-breaches-scams/; https://www.cybersecurity-insiders.com/healthcare-data-breach-craneware/; https://compudent.com/craneware-vendor-breach-dental-third-party-risk/",
   "schema_name": "vcdb",
   "schema_version": "1.4.0",
   "security_incident": "Confirmed",

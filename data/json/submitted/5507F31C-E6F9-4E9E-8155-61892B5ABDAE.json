@@ -104,7 +104,7 @@
       }
     }
   },
-  "reference": "https://www.yahoo.com/news/us/articles/chick-fil-cyberattack-even-dont-163359096.html; https://www.bleepingcomputer.com/news/security/chick-fil-a-discloses-data-breach-after-credential-stuffing-attacks/; https://www.malwarebytes.com/blog/data-breaches/2026/07/chick-fil-a-loyalty-accounts-hijacked-using-stolen-passwords",
+  "reference": "https://www.yahoo.com/news/us/articles/chick-fil-cyberattack-even-dont-163359096.html; https://www.bleepingcomputer.com/news/security/chick-fil-a-discloses-data-breach-after-credential-stuffing-attacks/; https://www.malwarebytes.com/blog/data-breaches/2026/07/chick-fil-a-loyalty-accounts-hijacked-using-stolen-passwords; https://www.thebanner.com/community/local-news/chick-fil-a-data-breach-cyberattack-maryland-BD7KUL2MIRHYHJWY45JDE2SB2A/; https://www.kcra.com/article/chick-fil-a-customers-data-breach/73250850; https://wtop.com/consumer-news/2026/07/chick-fil-a-alerts-dc-maryland-and-other-customers-of-data-breach/; https://www.wcnc.com/article/news/nation-world/chick-fil-a-customers-data-breach-10-states-impacted/507-fed17dd1-0496-4d22-ae75-cb3aa2a24ad6; https://www.securityweek.com/chick-fil-a-accounts-get-fried-in-credential-stuffing-attack/; https://www.usatoday.com/story/money/2026/07/22/chick-fil-a-app-cyberattack-data-breach/91008285007/; https://www.privacyguides.org/news/2026/07/24/data-breach-roundup-july-17-23-2026/",
   "schema_name": "vcdb",
   "schema_version": "1.4.0",
   "security_incident": "Confirmed",
