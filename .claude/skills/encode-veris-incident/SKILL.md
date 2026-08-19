@@ -1,6 +1,6 @@
 ---
 name: encode-veris-incident
-version: "20260819T123106Z"
+version: "20260819T132648Z"
 description: Encode a GitHub issue describing a data breach into a VERIS-schema JSON incident for VCDB. Invoke with a vz-risk/VCDB issue URL (e.g. https://github.com/vz-risk/VCDB/issues/23372) and an optional analyst GitHub handle. Reads the issue and its linked sources, finds an additional independent source via web search, maps everything to the VERIS schema (vcdb-merged.json), and writes a validated JSON file to data/json/submitted/.
 ---
 
@@ -9,7 +9,7 @@ description: Encode a GitHub issue describing a data breach into a VERIS-schema 
 You turn a GitHub issue that describes a data breach into one VERIS-schema JSON
 object and write it to `data/json/submitted/<UUID>.json`.
 
-**Skill version: `20260819T123106Z`.** This is the skill's revision timestamp
+**Skill version: `20260819T132648Z`.** This is the skill's revision timestamp
 (UTC date + Zulu time, `YYYYMMDDThhmmssZ`). Claude skills have no automatic
 version number, so this string is the version of record. Bump it whenever you
 edit this skill to the current UTC date+time —
@@ -308,6 +308,33 @@ Guidance:
     the refusal in `plus.analyst_notes` rather than dropping the attribute;
   - (c) add a People asset to `asset.assets`: a `"P - …"` variety for the targeted
     person, using `"P - Unknown"` if the role is unspecified.
+- **Phished/social-engineered credentials that are then used → also code
+  `action.hacking`.** A social-engineering issue tag (e.g. `Social-ext-Phish`)
+  is not the end of the analysis — read the sources fully for what happened
+  *after* the credentials were obtained, don't stop once the template tag is
+  decoded. When sources describe an attacker acquiring credentials via
+  `action.social` (Phishing, Pretexting, etc.) **and** confirm those
+  credentials were subsequently used (to log in, access an account/system,
+  etc.), code **both**:
+  - `action.social` for the acquisition, **and**
+  - `action.hacking` with `variety` including `"Use of stolen creds"` for the
+    subsequent use — this is a second, distinct action, not a detail of the
+    social action.
+  - Add `{"variety": "Credentials"}` to `attribute.confidentiality.data[]` —
+    the credentials themselves were compromised data, regardless of what else
+    was accessed with them.
+  - Extend `plus.event_chain` with a step for the credential use (e.g.
+    `hak/ext/srv/cp` following the `soc/ext/ppl/ia` acquisition step) so the
+    chain reflects both actions.
+  - **Only add `action.hacking` when a source confirms the credentials were
+    actually used** — never infer use just because credentials were
+    successfully phished. **If sources confirm the phishing succeeded but say
+    nothing about the credentials being used afterward, do not add
+    `action.hacking` — but explicitly say so in `plus.analyst_notes`** (e.g.
+    "credentials were confirmed obtained via phishing; no source states
+    whether they were subsequently used, so no action.hacking block is
+    coded"). Leaving this unexplained reads as an oversight to a reviewer, not
+    a deliberate gap.
 - **Data scope:** code the full claimed scope of exfiltrated data in
   `attribute.confidentiality.data[].variety`, not just one category — e.g.
   `Medical`, `Personal`, `Source code`, `Secrets` (trade secrets / unreleased
@@ -516,7 +543,7 @@ about data gaps — only ask for the analyst handle if it is missing.
   1. `Closes <issue URL>` — the full GitHub issue URL this record encodes
      (e.g. `Closes https://github.com/vz-risk/VCDB/issues/23372`), so a reviewer
      can copy/paste it to check the work against the source issue.
-  2. `Encoded by AI — encode-veris-incident skill version 20260819T123106Z`
+  2. `Encoded by AI — encode-veris-incident skill version 20260819T132648Z`
      (use the **Skill version** string from the top of this file verbatim), so
      reviewers know the record was AI-generated and by which skill revision.
 
